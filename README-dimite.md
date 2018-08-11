@@ -69,3 +69,18 @@
 ![image](https://github.com/ningbaoqi/DesignModeAndFramework/blob/master/gif/pic-32.jpg)
 
 + Wizard类把太多的方法暴露给了InstallSoftware类，两者的朋友关系太密切了，耦合关系变得异常牢固，如果将Wizard类中的first方法返回值的类型由int改为boolean，就需要修改InstallSoftware类，从而把修改变更的风险扩散开了，因此，这样的耦合是极度不适合的，我们需要对设计进行重构；
+
+##### 根据分析的修改
+
+![image](https://github.com/ningbaoqi/DesignModeAndFramework/blob/master/gif/pic-33.jpg)
+
+##### 修改后的导向类
+
+![image](https://github.com/ningbaoqi/DesignModeAndFramework/blob/master/gif/pic-34.jpg)
+
++ 经过这样的重构，Wizard类就只对外公布了一个public方法，即使要修改first方法的返回值，影响的也仅仅只是Wizard本身，其他类不受影响，这显示了类的高内聚特性；
+
+##### 修改后的安装软件类
+
+![image](https://github.com/ningbaoqi/DesignModeAndFramework/blob/master/gif/pic-35.jpg)
+
