@@ -17,3 +17,9 @@
 + 这样在使用时要获得用户信息，就当是IUserBO实现类，要是希望维护用户的信息，就把它当作IUserBiz的实现类；如下面代码使用：
 
 ![image](https://github.com/ningbaoqi/DesignModeAndFramework/blob/master/gif/pic-3.jpg)
+
+##### 最终的设计
++ 在实际的使用中，我们更倾向于使用两个不同的类或接口，一个是IUserBO，一个是IUserBiz；使用单一原则思想；
+
+![image](https://github.com/ningbaoqi/DesignModeAndFramework/blob/master/gif/pic-4.jpg)
+
