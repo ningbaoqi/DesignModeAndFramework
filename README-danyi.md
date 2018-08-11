@@ -4,3 +4,8 @@
 + 需要用户管理，修改用户的信息，增加机构（一个人属于多个机构），增加角色等，用户有这么多的信息和行为要维护，设计出合理的架构；
 ##### 错误的例子
 + 把这些写到一个接口中，都是用户管理类中的元素；
+
+![image](https://github.com/ningbaoqi/DesignModeAndFramework/blob/master/gif/pic-1.jpg)
+
+##### 错误的分析
++ 因为用户的属性和用户的行为没有分开，这是一个严重的错误，这个接口确实设计的一团糟，应该把用户的信息抽取成一个BO（Business Objecrt，业务对象），把行为抽取成一个Biz（Business Logic，业务逻辑）；
