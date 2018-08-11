@@ -42,3 +42,18 @@
 
 ##### 错误分析
 + 思考下IPettyGirl这个接口，这个接口是否做到了最优化设计？答案是否定的，还可以对接口进行优化；只有气质，其他方面一般，也属于美女；所以这个接口设计是有缺陷的，过于庞大了，容纳了一些可变的因素；
+
+##### 按照分析的改进
++ 将美女分成气质型美女和美丽型美女； 
+
+![image](https://github.com/ningbaoqi/DesignModeAndFramework/blob/master/gif/pic-46.jpg)
+
+##### 两种类型的美女定义
+
+![image](https://github.com/ningbaoqi/DesignModeAndFramework/blob/master/gif/pic-47.jpg)
+
+##### 最标准的美女
+
+![image](https://github.com/ningbaoqi/DesignModeAndFramework/blob/master/gif/pic-48.jpg)
+
++ 通过这样的重构，不管以后是要气质美女还是外形美女，都可以保持接口的稳定，当然，有人会说，以后可能审美观点发生变化了，那接口还是需要修改呀，确实是的，但是设计是有限度的，不能无限的考虑未来的变更情况，否则就会陷入设计的泥潭中而无法自拔；以上将一个臃肿的接口变更为两个独立的接口所依赖的原则就是接口隔离原则，让星探AbstractSearcher依赖两个专门的接口比依赖一个综合的接口要灵活，接口是我们设计时对外提供的契约，通过分散定义多个接口，可以预防未来变更的扩散，提高系统的灵活性和可维护性；
