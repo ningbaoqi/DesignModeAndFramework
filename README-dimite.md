@@ -46,3 +46,26 @@
 ![image](https://github.com/ningbaoqi/DesignModeAndFramework/blob/master/gif/pic-28.jpg)
 
 + 对程序进行了简单的修改，把Teacher中对`List<Girl>`的初始化移动到了场景类中，同时在GroupLeader中增加了对Girl的注入，避开了Teacher类对陌生类Girl的访问，降低了系统间的耦合，提供了系统的健壮性；一个类只和朋友交流，不与陌生类交流，不要出现`getA().getB().getC().getD()`这种情况（在一种极端的情况下允许出现这种访问，即一个点号后面的返回类型都相同），类与类之间的关系是建立在类间的，而不是方法间的，因此一个方法尽量不引入一个类中不存在的对象，当然，JDK API提供的类除外；
+
+#### [二、朋友间也是有距离的]()
+
+##### 项目说明
++ 模拟安装软件，采用合理的架构；
+
+##### 错误的例子
+
+![image](https://github.com/ningbaoqi/DesignModeAndFramework/blob/master/gif/pic-29.jpg)
+
+##### 导向类
+
+![image](https://github.com/ningbaoqi/DesignModeAndFramework/blob/master/gif/pic-30.jpg)
+
+##### 安装软件类
+
+![image](https://github.com/ningbaoqi/DesignModeAndFramework/blob/master/gif/pic-31.jpg)
+
+##### 场景类
+
+![image](https://github.com/ningbaoqi/DesignModeAndFramework/blob/master/gif/pic-32.jpg)
+
++ Wizard类把太多的方法暴露给了InstallSoftware类，两者的朋友关系太密切了，耦合关系变得异常牢固，如果将Wizard类中的first方法返回值的类型由int改为boolean，就需要修改InstallSoftware类，从而把修改变更的风险扩散开了，因此，这样的耦合是极度不适合的，我们需要对设计进行重构；
