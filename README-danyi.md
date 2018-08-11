@@ -9,3 +9,11 @@
 
 ##### 错误的分析
 + 因为用户的属性和用户的行为没有分开，这是一个严重的错误，这个接口确实设计的一团糟，应该把用户的信息抽取成一个BO（Business Objecrt，业务对象），把行为抽取成一个Biz（Business Logic，业务逻辑）；
+##### 按照分析的改进
++ 重新拆封成两个接口，IUserBO负责用户的属性，也就是IUserBO的职责就是收集和反馈用户的属性信息，IUserBiz负责用户的行为，完成用户信息的维护和变更；
+
+![image](https://github.com/ningbaoqi/DesignModeAndFramework/blob/master/gif/pic-2.jpg)
+
++ 这样在使用时要获得用户信息，就当是IUserBO实现类，要是希望维护用户的信息，就把它当作IUserBiz的实现类；如下面代码使用：
+
+![image](https://github.com/ningbaoqi/DesignModeAndFramework/blob/master/gif/pic-3.jpg)
