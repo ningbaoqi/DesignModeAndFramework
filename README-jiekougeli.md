@@ -19,3 +19,26 @@
 + 将气质优雅、美丽、身材妖娆全部写在同一个接口中； 
 
 ![image](https://github.com/ningbaoqi/DesignModeAndFramework/blob/master/gif/pic-40.jpg)
+
+##### 美女接口
+
+![image](https://github.com/ningbaoqi/DesignModeAndFramework/blob/master/gif/pic-41.jpg)
+
+##### 美女实现类
+
+![image](https://github.com/ningbaoqi/DesignModeAndFramework/blob/master/gif/pic-42.jpg)
+
+##### 星探抽象类
+
+![image](https://github.com/ningbaoqi/DesignModeAndFramework/blob/master/gif/pic-43.jpg)
+
+##### 星探实现类
+
+![image](https://github.com/ningbaoqi/DesignModeAndFramework/blob/master/gif/pic-44.jpg)
+
+##### 场景类
+
+![image](https://github.com/ningbaoqi/DesignModeAndFramework/blob/master/gif/pic-45.jpg)
+
+##### 错误分析
++ 思考下IPettyGirl这个接口，这个接口是否做到了最优化设计？答案是否定的，还可以对接口进行优化；只有气质，其他方面一般，也属于美女；所以这个接口设计是有缺陷的，过于庞大了，容纳了一些可变的因素；
