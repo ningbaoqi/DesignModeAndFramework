@@ -31,3 +31,19 @@
 ![image](https://github.com/ningbaoqi/DesignModeAndFramework/blob/master/gif/pic-5.jpg)
 
 ![image](https://github.com/ningbaoqi/DesignModeAndFramework/blob/master/gif/pic-6.jpg)
+
+##### 更好优化的分析
++ 单一职责原则要求一个接口或类只有一个原因引发变化，也就是一个接口或类只有一个职责，它就负责一件事情；但是该例子是吗？好像不是！IPhone这个接口可不是只有一个职责，它包含了两个职责：一个是协议管理，一个是数据传送。dial()和hangup()两个方法实现的是协议管理，分别负责拨号接通和挂机；chat()实现的是数据的传送，把我们的话转换成模拟信号或数字信号传递到对方，然后再把对方传递过来的信号还原成我们所能听得懂的语言。发现上面类图的IPhone接口包含了两个职责，而且这两个职责的变化不互相影响，那就需要考虑分成两个接口；
+
+##### 按照分析的改进
+
+![image](https://github.com/ningbaoqi/DesignModeAndFramework/blob/master/gif/pic-7.jpg)
+
+##### 再次分析
++ 这个架构确实是符合了单一职责原则，但是一个手机类要把ConnectionManager和DataTransfer组合在一块才能使用，组合是一种强耦合关系，你和我都有共同的生命周期，这样的强耦合关系还不如使用接口实现的方式呢，而且该增加了类的复杂性，多个两个类；
+
+##### 最终的设计
+
+![image](https://github.com/ningbaoqi/DesignModeAndFramework/blob/master/gif/pic-8.jpg)
+
++ 这样一个类实现了两个接口，把两个职责融合在一个类中，可能你会觉得这个Phone有两个原因引起变化，是的，但是别忘记了我们是面向接口编程，我们对外公布的是接口而不是实现类，而且，如果真要实现类的单一职责，这个就必须使用上面的组合模式了，这会引起类间耦合过重、类的数量增加等问题，认为增加了设计的复杂性；
