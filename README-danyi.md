@@ -23,3 +23,11 @@
 
 ![image](https://github.com/ningbaoqi/DesignModeAndFramework/blob/master/gif/pic-4.jpg)
 
+### 绝杀技，打破你的传统思维
+#### 项目说明
++ 电话通话的时候有4个过程发生：拨号、通话、回应、挂机，设计出合理的架构；
+##### 一般的设计
+
+![image](https://github.com/ningbaoqi/DesignModeAndFramework/blob/master/gif/pic-5.jpg)
+
+![image](https://github.com/ningbaoqi/DesignModeAndFramework/blob/master/gif/pic-6.jpg)
