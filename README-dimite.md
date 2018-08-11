@@ -7,3 +7,6 @@
 #### 项目说明
 + 模拟一个老师让体育委员确认一个全班女生到齐的情况，设计合理的架构；
 ##### 错误的例子
+
+![image](https://github.com/ningbaoqi/DesignModeAndFramework/blob/master/gif/pic-20.jpg)
+
