@@ -45,3 +45,4 @@
 
 ![image](https://github.com/ningbaoqi/DesignModeAndFramework/blob/master/gif/pic-28.jpg)
 
++ 对程序进行了简单的修改，把Teacher中对`List<Girl>`的初始化移动到了场景类中，同时在GroupLeader中增加了对Girl的注入，避开了Teacher类对陌生类Girl的访问，降低了系统间的耦合，提供了系统的健壮性；一个类只和朋友交流，不与陌生类交流，不要出现`getA().getB().getC().getD()`这种情况（在一种极端的情况下允许出现这种访问，即一个点号后面的返回类型都相同），类与类之间的关系是建立在类间的，而不是方法间的，因此一个方法尽量不引入一个类中不存在的对象，当然，JDK API提供的类除外；
