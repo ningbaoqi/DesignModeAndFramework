@@ -17,3 +17,5 @@
 + 星探和美女，设计合理的架构；
 #### 错误的例子
 + 将气质优雅、美丽、身材妖娆全部写在同一个接口中； 
+
+![image](https://github.com/ningbaoqi/DesignModeAndFramework/blob/master/gif/pic-40.jpg)
